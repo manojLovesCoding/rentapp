@@ -13,12 +13,18 @@ import LandlordTenants from "./pages/landlord/Tenants";
 import AdminSettings from "./pages/Admin/Settings";
 import AdminCompliance from "./pages/Admin/Compliance";
 import AdminUsers from "./pages/Admin/Users";
+import SignIn from "./pages/auth/SignIn";
+import SignUp from "./pages/auth/SignUp";
+import AdminSignIn from "./pages/auth/AdminSignIn";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/admin/login" element={<AdminSignIn />} />
         <Route path="/tenant" element={<TenantDashboard />} />
         <Route path="/tenant/payments" element={<TenantPayments />} />
         <Route path="/tenant/reporting" element={<TenantReporting />} />
